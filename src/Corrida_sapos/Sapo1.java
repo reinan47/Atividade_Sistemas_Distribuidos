@@ -1,5 +1,7 @@
 package Corrida_sapos;
 
+import java.util.Random;
+
 public class Sapo1 extends Thread{
 	private int salto;
 
@@ -16,15 +18,15 @@ public class Sapo1 extends Thread{
 	}
 	
 	public void run() {
-		if(salto == 0)
-			salto++;
-		System.out.println("TH -> 1 = " + salto);
-		try {
-			Thread.sleep(100000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		while(salto <= 1179) {
+			System.out.println("TH -> 1 = " + salto);
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			salto +=  new Random().nextInt(2);
 		}
-		
 	}
 }
