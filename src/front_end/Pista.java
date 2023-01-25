@@ -7,6 +7,12 @@ import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
+import Corrida_sapos.Sapos;
+import Corrida_sapos.Sapo2;
+import Corrida_sapos.Sapo3;
+import Corrida_sapos.Sapo4;
+import Corrida_sapos.Sapo5;
+
 public class Pista {
 	public BufferedImage ImagemFundo;
 	public Color cor = new Color(243, 102, 88);
@@ -68,7 +74,18 @@ public class Pista {
 		graphics.fillRect(1169, 90, 10, 10);
 		graphics.fillRect(1169, 110, 10, 10);
 		graphics.fillRect(1169, 130, 10, 10);
-
+		
+		Sapos s1 = new Sapos(1);
+		Sapo2 s2 = new Sapo2(1);
+		Sapo3 s3 = new Sapo3(1);
+		Sapo4 s4 = new Sapo4(1);
+		Sapo5 s5 = new Sapo5(1);
+		new Thread(s1).start();
+		new Thread(s2).start();
+		new Thread(s3).start();
+		new Thread(s4).start();
+		new Thread(s5).start();
+		
 		return new ImageIcon(ImagemFundo);
 	}
 }

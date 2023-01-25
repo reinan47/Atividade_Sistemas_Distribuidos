@@ -2,10 +2,10 @@ package Corrida_sapos;
 
 import java.util.Random;
 
-public class Sapo1 extends Thread{
+public class Sapos extends Thread{
 	private int salto;
 
-	public Sapo1(int salto) {
+	public Sapos(int salto) {
 		super();
 		this.salto = salto;
 	}
