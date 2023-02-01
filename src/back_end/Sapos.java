@@ -56,8 +56,8 @@ public class Sapos extends Thread{
 					//TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			ordem = ordem.hashCode()+30;
-			frog.setLocation(ordem.hashCode(), 170);
+			ordem = ordem.hashCode()+38;
+			frog.setLocation(ordem.hashCode(), 160);
 		}
 		
 	}

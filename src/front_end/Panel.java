@@ -17,6 +17,8 @@ public class Panel extends JPanel {
 	
 	private JLabel plataforma = new JLabel();
 	
+	private JLabel colocacao = new JLabel(new ImageIcon(Panel.class.getResource("/resources/colocacao.png")));
+	
 	private JLabel s1 = new JLabel(new ImageIcon(Panel.class.getResource("/resources/Sapo1.png")));
 	
 	private JLabel s2 = new JLabel(new ImageIcon(Panel.class.getResource("/resources/Sapo2.png")));
@@ -50,12 +52,15 @@ public class Panel extends JPanel {
 		s4.setBounds(10, 120, 20, 20);
 		
 		s5.setBounds(10, 140, 25, 20);
+		
+		colocacao.setBounds(30, 180, 105, 50);
 
 		add(s1);
 		add(s2);
 		add(s3);
 		add(s4);
-		add(s5);	
+		add(s5);
+		add(colocacao);
 
 		
 		plataforma.setBounds(0, 10, 1200, 265);
