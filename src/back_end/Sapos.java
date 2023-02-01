@@ -13,7 +13,7 @@ public class Sapos extends Thread{
 	private JLabel frog; 
 	private int distanciaMax;
 	private String nome;
-	static Object ordem = 0;
+	static Object ordem = 780;
 
 	public Sapos(int salto, JLabel frog, String nome) {
 		super();
@@ -56,7 +56,8 @@ public class Sapos extends Thread{
 					//TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			ordem = ordem.hashCode()+38;
+
+			ordem = ordem.hashCode()+53;
 			frog.setLocation(ordem.hashCode(), 160);
 		}
 		
