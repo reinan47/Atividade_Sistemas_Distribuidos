@@ -7,19 +7,23 @@ import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
+
 public class Pista {
 	public BufferedImage ImagemFundo;
+	
+	public Graphics graphics;
 	public Color cor = new Color(243, 102, 88);
 	public Color corBorda = new Color(171, 193, 69);
-	
+
 	public Pista(JLabel label) {
 		label.setIcon(fundo());
+		
 	}
-	
+
 	public ImageIcon fundo() {
 	
 		ImagemFundo = new BufferedImage(1200, 265, BufferedImage.TYPE_INT_ARGB);
-		Graphics graphics = ImagemFundo.createGraphics();
+		graphics = ImagemFundo.createGraphics();
 		graphics.setColor(cor);
 	    
 		
@@ -33,6 +37,7 @@ public class Pista {
 		graphics.fillRect(10, 150, 1179, 40);
 		
 		graphics.setColor(Color.WHITE);
+		graphics.drawLine(30, 149, 30, 50);
 		//drawLine(10, 50, 1187, 50);
 		//dividindo as trilhas de corrida
 		graphics.drawLine(10, 70, 1187, 70);
@@ -68,7 +73,25 @@ public class Pista {
 		graphics.fillRect(1169, 90, 10, 10);
 		graphics.fillRect(1169, 110, 10, 10);
 		graphics.fillRect(1169, 130, 10, 10);
+		
+		
 
+
+		
 		return new ImageIcon(ImagemFundo);
 	}
+	public void moveFrog(int salto) {
+		graphics.setColor(Color.BLACK);
+		try {
+			Thread.sleep(10);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		graphics.fillRect( salto + 10, 55, 9, 9);
+
+
+	}
+	
+
 }
