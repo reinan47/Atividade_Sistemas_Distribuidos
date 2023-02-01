@@ -3,6 +3,7 @@ package front_end;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
+import javax.swing.border.EmptyBorder;
 
 public class frame extends JFrame {
 
@@ -31,8 +32,7 @@ public class frame extends JFrame {
 	public frame() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1220, 265);
-		contentPane = new Panel();
-		//contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 	}

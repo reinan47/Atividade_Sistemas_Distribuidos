@@ -15,17 +15,17 @@ public class Panel extends JPanel {
 
 	private static final long serialVersionUID = 1L;
 	
-	JLabel plataforma = new JLabel();
+	private JLabel plataforma = new JLabel();
 	
-	JLabel s1 = new JLabel(new ImageIcon(Panel.class.getResource("/resources/Sapo1.png")));
+	private JLabel s1 = new JLabel(new ImageIcon(Panel.class.getResource("/resources/Sapo1.png")));
 	
-	JLabel s2 = new JLabel(new ImageIcon(Panel.class.getResource("/resources/Sapo2.png")));
+	private JLabel s2 = new JLabel(new ImageIcon(Panel.class.getResource("/resources/Sapo2.png")));
 	
-	JLabel s3 = new JLabel(new ImageIcon(Panel.class.getResource("/resources/Sapo3.png")));
+	private JLabel s3 = new JLabel(new ImageIcon(Panel.class.getResource("/resources/Sapo3.png")));
 	
-	JLabel s4 = new JLabel(new ImageIcon(Panel.class.getResource("/resources/Sapo4.png")));
+	private JLabel s4 = new JLabel(new ImageIcon(Panel.class.getResource("/resources/Sapo4.png")));
 	
-	JLabel s5 = new JLabel(new ImageIcon(Panel.class.getResource("/resources/Sapo5.png")));
+	private JLabel s5 = new JLabel(new ImageIcon(Panel.class.getResource("/resources/Sapo5.png")));
 	
 	
 	/**
