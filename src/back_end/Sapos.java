@@ -39,7 +39,7 @@ public class Sapos extends Thread{
 		while(distanciaMax <= 1160) {
 			
 			try {
-				Thread.sleep(0);
+				Thread.sleep(50);
 			} catch (InterruptedException e) {
 					//TODO Auto-generated catch block
 				e.printStackTrace();
