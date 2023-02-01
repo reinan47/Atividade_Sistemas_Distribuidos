@@ -1,4 +1,5 @@
-package Corrida_sapos;
+package back_end;
+
 import java.util.Random;
 
 import javax.swing.JLabel;
@@ -12,6 +13,7 @@ public class Sapos extends Thread{
 	private JLabel frog; 
 	private int distanciaMax;
 	private String nome;
+	static Object ordem = 0;
 
 	public Sapos(int salto, JLabel frog, String nome) {
 		super();
@@ -23,7 +25,7 @@ public class Sapos extends Thread{
 	
 	public void run() {
 		try {
-			Thread.sleep(1000);
+			Thread.sleep(1500);
 		} catch (InterruptedException e) {
 				//TODO Auto-generated catch block
 			e.printStackTrace();
@@ -37,7 +39,7 @@ public class Sapos extends Thread{
 		while(distanciaMax <= 1160) {
 			
 			try {
-				Thread.sleep(100);
+				Thread.sleep(0);
 			} catch (InterruptedException e) {
 					//TODO Auto-generated catch block
 				e.printStackTrace();
@@ -46,7 +48,16 @@ public class Sapos extends Thread{
 			frog.setLocation(frog.getX()+salto, frog.getY());
 			distanciaMax += salto;
 			GerarInfo();
-		
+		}
+		synchronized(ordem) {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+					//TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			ordem = ordem.hashCode()+30;
+			frog.setLocation(ordem.hashCode(), 170);
 		}
 		
 	}
