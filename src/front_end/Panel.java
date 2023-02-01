@@ -8,7 +8,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.BevelBorder;
 
-import Corrida_sapos.Sapos;
+import back_end.Sapos;
 
 
 public class Panel extends JPanel {
