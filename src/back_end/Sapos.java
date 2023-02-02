@@ -13,7 +13,8 @@ public class Sapos extends Thread{
 	private JLabel frog; 
 	private int distanciaMax;
 	private String nome;
-	static Object ordem = 780;
+	private static Object ordem = 780;
+	private static int colocacao = 1;
 
 	public Sapos(int salto, JLabel frog, String nome) {
 		super();
@@ -31,7 +32,6 @@ public class Sapos extends Thread{
 			e.printStackTrace();
 		}
 		MvFrog();
-		System.out.println("---------------------   " + nome + " Chegou -----------------------");
 	}
 
 
@@ -39,7 +39,7 @@ public class Sapos extends Thread{
 		while(distanciaMax <= 1160) {
 			
 			try {
-				Thread.sleep(50);
+				Thread.sleep(40);
 			} catch (InterruptedException e) {
 					//TODO Auto-generated catch block
 				e.printStackTrace();
@@ -51,12 +51,12 @@ public class Sapos extends Thread{
 		}
 		synchronized(ordem) {
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(1500);
 			} catch (InterruptedException e) {
 					//TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-
+			System.out.println("----- " + colocacao++ + "º" + " - " +  nome);
 			ordem = ordem.hashCode()+53;
 			frog.setLocation(ordem.hashCode(), 160);
 		}
@@ -65,8 +65,6 @@ public class Sapos extends Thread{
 	public void GerarInfo() {
 		System.out.println("Nome : " + nome + "\nSalto: " + salto + "\nDistancia Percorrida: " + distanciaMax + "\n\n");
 	}
-
-		
 		
 	
 }

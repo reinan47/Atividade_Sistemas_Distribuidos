@@ -37,7 +37,7 @@ public class Panel extends JPanel {
 	 * Create the panel.
 	 * @throws InterruptedException 
 	 */
-	public Panel() {
+	public Panel(){
 		setBorder(new BevelBorder(BevelBorder.LOWERED, Color.BLACK, Color.BLACK, Color.BLACK, Color.BLACK));
 		
 		setBounds(new Rectangle(0,0,100,100));
@@ -71,6 +71,12 @@ public class Panel extends JPanel {
 		
 		plataforma.setBounds(0, 10, 1200, 265);
 		add(plataforma);
+		
+		StarRun();
+
+	}
+	
+	public void StarRun() {
 		Sapos sapo1 = new Sapos(1,s1,"Zefa");
 		Sapos sapo2 = new Sapos(1,s2,"Romildo");
 		Sapos sapo3 = new Sapos(1,s3,"Karrie");
@@ -82,7 +88,6 @@ public class Panel extends JPanel {
 		sapo3.start();
 		sapo4.start();
 		sapo5.start();
-
 	}
 
 }
