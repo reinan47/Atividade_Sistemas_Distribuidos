@@ -46,15 +46,15 @@ public class Panel extends JPanel {
 
 		new Pista(plataforma);
 
-		s1.setBounds(10, 60, 20, 20);
+		s1.setBounds(10, 60, 30, 21);
 		
-		s2.setBounds(10, 80, 20, 20);
+		s2.setBounds(10, 80, 30, 21);
 		
-		s3.setBounds(10, 100, 20, 20);
+		s3.setBounds(10, 100, 30, 21);
 		
-		s4.setBounds(10, 120, 20, 20);
+		s4.setBounds(10, 120, 30, 21);
 		
-		s5.setBounds(10, 140, 20, 20);
+		s5.setBounds(10, 140, 30, 21);
 		
 		colocacao.setBounds(800, 175, 300, 50);
 		
