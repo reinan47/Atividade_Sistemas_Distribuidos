@@ -38,6 +38,8 @@ public class Pista {
 		
 		graphics.setColor(Color.WHITE);
 		graphics.drawLine(40, 149, 40, 50);
+		graphics.drawLine(41, 149, 41, 50);
+
 		//drawLine(10, 50, 1187, 50);
 		//dividindo as trilhas de corrida
 		graphics.drawLine(10, 70, 1187, 70);

@@ -41,7 +41,6 @@ public class Sapos extends Thread{
 			try {
 				Thread.sleep(40);
 			} catch (InterruptedException e) {
-					//TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			salto = new Random().nextInt(10);
@@ -49,11 +48,13 @@ public class Sapos extends Thread{
 			distanciaMax += salto;
 			GerarInfo();
 		}
+		if(distanciaMax >= 1160) {
+			frog.setLocation(1167, frog.getY());
+		}
 		synchronized(ordem) {
 			try {
 				Thread.sleep(1500);
 			} catch (InterruptedException e) {
-					//TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			System.out.println("----- " + colocacao++ + "º" + " - " +  nome);
